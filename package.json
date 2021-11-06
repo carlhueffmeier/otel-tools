@@ -12,6 +12,7 @@
     "monitoring"
   ],
   "author": "Carl Huffmeier <carlhueffmeier@gmail.com>",
+  "repository": "carlhueffmeier/otel-tools",
   "license": "ISC",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
