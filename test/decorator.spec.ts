@@ -73,7 +73,7 @@ describe('@TraceMethod decorator', () => {
     target.syncAdd(1, 1);
 
     expect(mockTracer.startActiveSpan).toHaveBeenCalledWith(
-      `${target.constructor.name}#${target.syncAdd.name}`,
+      `${target.constructor.name}.${target.syncAdd.name}`,
       expect.any(Function),
     );
   });

@@ -16,7 +16,7 @@ export function TraceMethod(options: TraceMethodOptions): MethodDecorator {
     const originalMethod = descriptor.value;
     const spanName =
       options.spanName ??
-      [target?.constructor?.name, String(propertyKey)].join('#');
+      [target?.constructor?.name, String(propertyKey)].join('.');
 
     descriptor.value = traceMethod({ tracer, spanName }, originalMethod);
     Object.defineProperty(descriptor.value, 'name', { value: propertyKey });
